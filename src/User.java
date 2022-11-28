@@ -125,6 +125,7 @@ public class User {
 						System.out.println();
 						System.out.println("Enter the ID number of the task you wish to delete: \n");
 						int deleteID = input.nextInt();
+						input.nextLine();
 
 						String qry ="delete from todolistitem where idtodolistitem= ?"; 
 						PreparedStatement pstmt = con.prepareStatement(qry);
@@ -175,10 +176,21 @@ public class User {
 
 
 						}
+//						System.out.println();
+//						System.out.println("Enter the ID number of the task you wish to delete: \n");
+//						int deleteID = input.nextInt();
+//						input.nextLine();
+//
+//						String qry ="delete from todolistitem where idtodolistitem= ?"; 
+//						PreparedStatement pstmt = con.prepareStatement(qry);
+//						pstmt.setInt(1,deleteID); 
+//						pstmt.executeUpdate();  
+						
 						System.out.println();
-						System.out.println("Enter the ID number of the task you wish to edit: \n");
+						System.out.println("Enter the ID number of the task you wish to edit: ");
 						int editID = input.nextInt();
 						input.nextLine();
+						
 						
 						System.out.println("What would you like to change it to?");
 						String editTask = input.nextLine();
